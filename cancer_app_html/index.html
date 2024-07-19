@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Tumor Prediction Tool</title>
+</head>
+<body>
+    <div class="container">
+        <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Breast Cancer Tumor Prediction Tool</title>
@@ -40,7 +47,7 @@
     </div>
     <div class="row pb-3 justify-content-md-center">
       <div class="col-md-3 text-right">
-        <h5>tumor size:</h5>
+        <h5>Enter Tumor Metrics Below:</h5>
       </div>
       </div>
     </div>
@@ -52,97 +59,58 @@
 </head>
 
 <body>
-    <label for="numberInput">radius_mean:</label>
+    <label for="numberInput">radius:</label>
     <input type="number" id="numberInput" name="numberInput" min="1" max="100">
 </body>
     
 <body>
-    <label for="numberInput">texture_mean:</label>
+    <label for="numberInput">texture:</label>
     <input type="number" id="numberInput" name="numberInput" min="1" max="100">
 </body>
     
 <body>
-    <label for="numberInput">perimeter_mean:</label>
+    <label for="numberInput">perimeter:</label>
     <input type="number" id="numberInput" name="numberInput" min="1" max="100">
 </body>
     
 <body>
-    <label for="numberInput">area_mean:</label>
+    <label for="numberInput">area:</label>
     <input type="number" id="numberInput" name="numberInput" min="1" max="100">
 </body>
     
 <body>
-    <label for="numberInput">smoothness_mean:</label>
-    <input type="number" id="numberInput" name="numberInput" min="1" max="100">
-</body>
-
-<body>
-    <label for="numberInput">compactness_mean:</label>
-    <input type="number" id="numberInput" name="numberInput" min="1" max="100">
-</body>
-    
-<body>
-    <label for="numberInput">concavity_mean:</label>
+    <label for="numberInput">smoothness:</label>
     <input type="number" id="numberInput" name="numberInput" min="1" max="100">
 </body>
 
-    
 <body>
-    <label for="numberInput">concave points_mean:</label>
+    <label for="numberInput">compactness:</label>
     <input type="number" id="numberInput" name="numberInput" min="1" max="100">
 </body>
     
 <body>
-    <label for="numberInput">symmetry_mean:</label>
+    <label for="numberInput">concavity:</label>
+    <input type="number" id="numberInput" name="numberInput" min="1" max="100">
+</body>
+
+    
+<body>
+    <label for="numberInput">concave points:</label>
     <input type="number" id="numberInput" name="numberInput" min="1" max="100">
 </body>
     
 <body>
-    <label for="numberInput">radius_se:</label>
+    <label for="numberInput">symmetry:</label>
     <input type="number" id="numberInput" name="numberInput" min="1" max="100">
 </body>
     
 <body>
-    <label for="numberInput">texture_se:</label>
+    <label for="numberInput">fractal dimension:</label>
     <input type="number" id="numberInput" name="numberInput" min="1" max="100">
 </body>
-    
-<body>
-    <label for="numberInput">perimeter_se:</label>
-    <input type="number" id="numberInput" name="numberInput" min="1" max="100">
-</body>
-    
-    
-<body>
-    <label for="numberInput">area_se:</label>
-    <input type="number" id="numberInput" name="numberInput" min="1" max="100">
-</body>
-    
-<body>
-    <label for="numberInput">smoothness_se:</label>
-    <input type="number" id="numberInput" name="numberInput" min="1" max="100">
-</body>
-    
-<body>
-    <label for="numberInput">compactness_se:</label>
-    <input type="number" id="numberInput" name="numberInput" min="1" max="100">
-</body>
-    
-<body>
-    <label for="numberInput">concavity_se:</label>
-    <input type="number" id="numberInput" name="numberInput" min="1" max="100">
-</body>
-    
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Breast Cancer Tumor Prediction Tool</title>
-</head>
-<body>
-    <div class="container">
         <!-- Your existing HTML content here -->
-        <label for="radius_mean">radius_mean:</label>
-        <input type="number" id="radius_mean" name="radius_mean" min="1" max="100">
+<!--         <label for="radius_mean">radius_mean:</label>
+        <input type="number" id="radius_mean" name="radius_mean" min="1" max="100"> -->
 
         <!-- Add other input fields for tumor metrics here -->
 
@@ -189,17 +157,3 @@ def handle_submit(sender):
 text.on_submit(handle_submit)>
 </body>
      -->
-
-    
- 
-    
-    
-    
-    
-    
-</html>
-  </div>
-
-</body>
-
-</html>
