@@ -1,7 +1,7 @@
 <script>
     document.getElementById('executeButton').addEventListener('click', async () => {
         const texture = document.getElementById('texture').value;
-        const symmetry = document.getElementById('symmetry).value;
+        const symmetry = document.getElementById('symmetry').value;
         const perimeter = document.getElementById('perimeter').value;
         const radius = document.getElementById('radius').value;
         const area = document.getElementById('area').value;
@@ -19,19 +19,25 @@
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                radius: radius,
-                texture: texture,
-                perimeter: perimeter,
-                area: area,
-                smoothness: smoothness,
-                compactness: compactness,
-                concavity: concavity,
-                concave points: concave points,
-                fractal dimension: fractal dimension
+                radius: parseFloat(radius),
+                symmetry: parseFloat(symmetry),
+                texture: parseFloat(texture),
+                perimeter: parseFloat(perimeter),
+                area: parseFloat(area),
+                smoothness: parseFloat(smoothness),
+                compactness: parseFloat(compactness),
+                concavity: parseFloat(concavity),
+                concave_points: parseFloat(concave_points),
+                fractal_dimension: parseFloat(fractal_dimension)
                 // Include other input values here
             })
         });
-        const data = await response.json();
-        alert(data.result);
+
+        if (response.ok) {
+            const data = await response.json();
+            alert(data.result);
+        } else {
+            alert('Failed to get prediction. Please try again.');
+        }
     });
 </script>

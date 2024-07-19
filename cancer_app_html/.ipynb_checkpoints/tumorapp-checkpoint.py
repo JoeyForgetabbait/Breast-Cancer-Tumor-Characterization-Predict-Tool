@@ -15,16 +15,16 @@ def run_prediction():
     input_data = request.form
 
     # Extract input values from the request
-    radius = input_data.get('radius')
-    texture = input_data.get('texture')
-    perimeter = input_data.get('perimeter')
-    area = input_data.get('area')
-    smoothness = input_data.get('smoothness')
-    compactness = input_data.get('compactness')
-    concavity = input_data.get('concavity')
-    concave_points = input_data.get('concave points')
-    symmetry = input_data.get('symmetry')
-    fractal_dimension = input_data.get('fractal dimension')
+    radius = float(input_data.get('radius'))
+    texture = float(input_data.get('texture'))
+    perimeter = float(input_data.get('perimeter'))
+    area = float(input_data.get('area'))
+    smoothness = float(input_data.get('smoothness'))
+    compactness = float(input_data.get('compactness'))
+    concavity = float(input_data.get('concavity'))
+    concave_points = float(input_data.get('concave_points'))
+    symmetry = float(input_data.get('symmetry'))
+    fractal_dimension = float(input_data.get('fractal_dimension'))
 
     # Make predictions using the loaded model
     result = model.predict([[radius, texture, perimeter, area, smoothness, compactness, concavity, concave_points, symmetry, fractal_dimension]])
