@@ -1,6 +1,6 @@
-#write d3 function to read from api route - mongo db 
-#add html components to div tag
-<script>
+// #write d3 function to read from api route - mongo db 
+// #add html components to div tag
+// <script>
     document.getElementById('executeButton').addEventListener('click', async () => {
         const texture = document.getElementById('texture').value;
         const symmetry = document.getElementById('symmetry').value;
@@ -26,9 +26,9 @@
             fractal_dimension: parseFloat(fractal_dimension)
             // Include other input values here
         };
-
+        console.log(inputData);
         // Push input data to MongoDB
-        fetch('/pushdata', {
+        fetch('/run_prediction', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -40,7 +40,7 @@
                 console.log('Input data pushed to MongoDB successfully');
 
                 // Retrieve prediction data from MongoDB
-                fetch('/getprediction', {
+                fetch('/run_prediction', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
@@ -62,4 +62,4 @@
             console.error('Error pushing input data to MongoDB:', error);
         });
     });
-</script>
+// </script>

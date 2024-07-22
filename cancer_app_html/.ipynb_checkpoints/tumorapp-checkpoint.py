@@ -15,7 +15,7 @@ model = joblib.load('SVM_Model.pkl')
 def index():
     return render_template('index.html')
 
-@app.route('/runprediction', methods=['GET', 'POST'])
+@app.route('/run_prediction', methods=['GET', 'POST'])
 def run_prediction():
     if request.method == 'GET':
         # Handle GET request to fetch data from MongoDB
@@ -32,14 +32,15 @@ def run_prediction():
                 'concavity': item['concavity'],
                 'concave_points': item['concave_points'],
                 'symmetry': item['symmetry'],
-                'fractal_dimension': item['fractal_dimension'],
-                'result': item['result']
+                'fractal_dimension': item['fractal_dimension']
+                # 'result': item['result']
             })
         
         return jsonify({'data': response_data})
     
     elif request.method == 'POST':
-        input_data = request.form
+        input_data = request.json
+        print(input_data)
 
         # Extract input values from the request
         radius = float(input_data.get('radius'))
@@ -54,7 +55,7 @@ def run_prediction():
         fractal_dimension = float(input_data.get('fractal_dimension'))
 
         # Make predictions using the loaded model
-        result = model.predict([[radius, texture, perimeter, area, smoothness, compactness, concavity, concave_points, symmetry, fractal_dimension]])
+        result = model.predict([[radius, texture, perimeter, area, smoothness, compactness, concavity, concave_points, symmetry, fractal_dimension]]).tolist()
 
         # Update the MongoDB document with the input data and prediction result
         data = {

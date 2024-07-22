@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breast Cancer Tumor Prediction Tool</title>
-</head>
-<body>
-    <div class="container">
-        <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Breast Cancer Tumor Prediction Tool</title>
@@ -20,7 +17,7 @@
 <!--   <!-- polyfill.io is the library for using newer JavaScript features (such as Object.assign) in older browsers. -->
 <!--   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <!-- Leaflet CSS -->
-
+</head>
 <body>
 
   <div class="container">
@@ -51,39 +48,40 @@
 </head>
 
 <body>
-    <form action='/runprediction' method='post'>
-    <label for="numberInput">radius:</label>
-    <input type="number" id="numberInput" name="numberInput" min="0" max="100" step="0.01">
-    <label for="numberInput">texture:</label>
-    <input type="number" id="numberInput" name="numberInput" min="0" max="100" step="0.01">
-    <label for="numberInput">perimeter:</label>
-    <input type="number" id="numberInput" name="numberInput" min="0" max="100" step="0.01">
-    <label for="numberInput">area:</label>
-    <input type="number" id="numberInput" name="numberInput" min="0" max="100" step="0.01">
-    <label for="numberInput">smoothness:</label>
-    <input type="number" id="numberInput" name="numberInput" min="0" max="100" step="0.01">
-    <label for="numberInput">compactness:</label>
-    <input type="number" id="numberInput" name="numberInput" min="0" max="100" step="0.01">
-    <label for="numberInput">concavity:</label>
-    <input type="number" id="numberInput" name="numberInput" min="0" max="100" step="0.01">
-    <label for="numberInput">concave_points:</label>
-    <input type="number" id="numberInput" name="numberInput" min="0" max="100" step="0.01">
-    <label for="numberInput">symmetry:</label>
-    <input type="number" id="numberInput" name="numberInput" min="0" max="100" step="0.01">
-    <label for="numberInput">fractal_dimension:</label>
-    <input type="number" id="numberInput" name="numberInput" min="0" max="100" step="0.01">
+    <form>
+<!--     <form action='/run_prediction' method='post'> -->
+    <label for="radius">radius:</label>
+    <input type="number" id="radius" name="radius" min="0" max="100" step="0.01">
+    <label for="texture">texture:</label>
+    <input type="number" id="texture" name="texture" min="0" max="100" step="0.01">
+    <label for="perimeter">perimeter:</label>
+    <input type="number" id="perimeter" name="perimeter" min="0" max="100" step="0.01">
+    <label for="area">area:</label>
+    <input type="number" id="area" name="area" min="0" max="100" step="0.01">
+    <label for="smoothness">smoothness:</label>
+    <input type="number" id="smoothness" name="smoothness" min="0" max="100" step="0.01">
+    <label for="compactness">compactness:</label>
+    <input type="number" id="compactness" name="compactness" min="0" max="100" step="0.01">
+    <label for="concavity">concavity:</label>
+    <input type="number" id="concavity" name="concavity" min="0" max="100" step="0.01">
+    <label for="concave_points">concave_points:</label>
+    <input type="number" id="concave_points" name="concave_points" min="0" max="100" step="0.01">
+    <label for="symmetry">symmetry:</label>
+    <input type="number" id="symmetry" name="symmetry" min="0" max="100" step="0.01">
+    <label for="fractal_dimension">fractal_dimension:</label>
+    <input type="number" id="fractal_dimension" name="fractal_dimension" min="0" max="100" step="0.01">
         <!-- Your existing HTML content here -->
 <!--         <label for="radius_mean">radius_mean:</label>
         <input type="number" id="radius_mean" name="radius_mean" min="1" max="100"> -->
 
-    <!-- Include your JavaScript file -->
-    <script src="appjava.js"></script>
-</body>
+  
 
-</html>
 
         <!-- Add other input fields for tumor metrics here -->
     <button id="executeButton">Run Tumor Prediction</button>
+            <!-- Include your JavaScript file -->
+    <script src="{{url_for('static',filename='appjava.js')}}"></script>
+      
     </form>
 </body>
 
