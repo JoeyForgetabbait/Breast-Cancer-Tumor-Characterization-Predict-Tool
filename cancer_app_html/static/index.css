@@ -1,7 +1,7 @@
 :root {
     background-color: #242424;
     font-family: Inter;
-    color: white;
+    color: #FF00BF;
 }
 
 body {
@@ -12,5 +12,7 @@ body {
 .form-element{
     display:flex;
     flex-direction:column;
-    
+}
+.form-element input {
+    width: 50px; /* Adjust the width value as needed */
 }
