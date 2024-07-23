@@ -1,0 +1,16 @@
+:root {
+    background-color: #242424;
+    font-family: Inter;
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.form-element{
+    display:flex;
+    flex-direction:column;
+    
+}

@@ -51,7 +51,13 @@
                     console.log('Prediction data retrieved from MongoDB:', predictionData);
                     // Handle the prediction data as needed
                     let output = document.createElement('div');
-                    output.innerText = predictionData.data[predictionData.data.length-1]['result'];
+                    if (predictionData.data[predictionData.data.length-1]['result']===1){
+                        output.innerText = 'The tumor is predicted to be Malignant.'
+                    
+                    }
+                    else {
+                        output.innerText = 'The tumor is predicted to be benign.'
+                    }
                     console.log(output);
                     document.body.appendChild(output);
                 })
