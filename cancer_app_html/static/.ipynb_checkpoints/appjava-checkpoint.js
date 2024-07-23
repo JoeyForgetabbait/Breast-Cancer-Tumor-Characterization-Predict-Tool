@@ -1,7 +1,6 @@
-// #write d3 function to read from api route - mongo db 
-// #add html components to div tag
-// <script>
-    document.getElementById('executeButton').addEventListener('click', async () => {
+
+    document.getElementById('executeButton').addEventListener('click', async (event) => {
+        event.preventDefault();
         const texture = document.getElementById('texture').value;
         const symmetry = document.getElementById('symmetry').value;
         const perimeter = document.getElementById('perimeter').value;
@@ -36,6 +35,7 @@
             body: JSON.stringify(inputData)
         })
         .then(response => {
+            console.log('response', response);
             if (response.ok) {
                 console.log('Input data pushed to MongoDB successfully');
 
@@ -50,6 +50,10 @@
                 .then(predictionData => {
                     console.log('Prediction data retrieved from MongoDB:', predictionData);
                     // Handle the prediction data as needed
+                    let output = document.createElement('div');
+                    output.innerText = predictionData.data[predictionData.data.length-1]['result'];
+                    console.log(output);
+                    document.body.appendChild(output);
                 })
                 .catch(error => {
                     console.error('Error retrieving prediction data from MongoDB:', error);

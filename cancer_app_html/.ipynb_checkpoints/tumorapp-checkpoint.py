@@ -32,8 +32,8 @@ def run_prediction():
                 'concavity': item['concavity'],
                 'concave_points': item['concave_points'],
                 'symmetry': item['symmetry'],
-                'fractal_dimension': item['fractal_dimension']
-                # 'result': item['result']
+                'fractal_dimension': item['fractal_dimension'],
+                'result': item['result']
             })
         
         return jsonify({'data': response_data})
@@ -72,7 +72,7 @@ def run_prediction():
             'result': result[0]
         }
         collection.insert_one(data)
-
+        print(data)
         return jsonify({'result': result[0]})
 
 if __name__ == '__main__':
@@ -80,17 +80,3 @@ if __name__ == '__main__':
     
     
     
-# def run_prediction(request):
-#     # Example input that might cause the error
-#     potential_none_value = None
-
-#     try:
-#         # Attempt to convert the value to float
-#         float_value = float(potential_none_value)
-#     except TypeError:
-#         # Handle the case where the conversion fails due to NoneType
-#         print("Error: Cannot convert None to float")
-#         return HttpResponse(status=400)
-
-#     # Continue processing with the safe float value
-#     # ...
