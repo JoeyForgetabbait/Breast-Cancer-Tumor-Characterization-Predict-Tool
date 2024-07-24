@@ -1,15 +1,18 @@
 ![P (3)](https://github.com/user-attachments/assets/f49ff719-4ad9-47e9-aff1-ce9f7ae2e75e)
 
 ### Breast Cancer Tumor Prediction Tool
+
 ## Overview
+
 Breast cancer affects approximately 13% of women in the United States and remains a significant health concern. Our project focuses on developing a machine learning model to predict the malignancy of breast masses based on cell nuclei characteristics. 
 
 The dataset comprises 569 samples, with features derived from digitized images of fine needle aspirates of breast masses. These features characterize cell nuclei. The diagnosis column serves as the target variable, while the identity (ID) column, used for identification, will be omitted. Initially, our unoptimized model will utilize 30 features, which will be refined through optimization to enhance model performance.
 
 **Key attributes in this dataset include:**
+
 - ID number
 - Diagnosis (M = malignant, B = benign), our target variable.
-- Various numerical features such as radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension, computed from digitized images of FNA. Numerical Features are explained further below.
+- Various numerical features such as radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension, computed from digitized images of FNA. Numerical Features are explained further below
 + Radius: Mean of distances from center to points on the perimeter
 + Texture: Standard deviation of gray-scale values
 + Perimeter
@@ -40,6 +43,7 @@ According to the American Cancer Society, breast cancer occurs when cells in the
 The dataset contains diagnoses of lumps and masses found in patients, classifying them as either malignant (denoted by 'M') or benign (denoted by 'B'). This project will use these classifications to train and evaluate machine learning models, aiming to accurately predict the diagnosis based on the provided attributes.
 
 ## Model Performance
+
 In this project, various machine learning algorithms were evaluated, including:
 + **Neural Network Model:** Achieved an accuracy of 99%.
 + **Support Vector Machine (SVM) Model:** Achieved an accuracy of 97%.
@@ -48,8 +52,7 @@ For the SVM model, we explored several less optimal versions before finalizing t
 
 ## Feature
 
-Main feature of the model.
-•	Predicts the likelihood of breast cancer based on input data.
+Main feature- Predicts the likelihood of breast cancer based on input data.
 
 ## Installation
 
@@ -59,18 +62,22 @@ Copy code
 git clone https://github.com/JoeyForgetabbait/Breast-Cancer-Tumor-Characterization-Predict-Tool.git
 cd breast-cancer-prediction
 pip install -r requirements.txt
+
 ## Usage
 
 Provide examples and instructions for using your tool. Include screenshots if possible. For example:
 bash
 Copy code
 python predict.py --input data/sample_data.csv
+
 ## Example Output
 
 Include a snippet of expected output or results to give users an idea of what to expect.
 
 ## Acknowledgment for tools used
+
 **_Programming Languages:_** Python, Html, JavaScript, CSS
+
 **_Python Library:_**
 - Flask: https://flask.palletsprojects.com/en/3.0.x/
 - Pandas: https://pandas.pydata.org/
