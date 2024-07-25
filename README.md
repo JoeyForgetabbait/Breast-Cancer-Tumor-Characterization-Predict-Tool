@@ -87,7 +87,7 @@ Provide examples and instructions for using your tool. Include screenshots if po
 
 ## Example Output
 
-Include a snippet of expected output or results to give users an idea of what to expect.
+![Result Output](Resources/result.png)
 
 ## Acknowledgment for tools used
 
