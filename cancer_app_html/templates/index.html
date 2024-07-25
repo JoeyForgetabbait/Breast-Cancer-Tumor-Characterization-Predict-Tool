@@ -5,6 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Breast Cancer Tumor Prediction Tool</title>
+    <style>
+        .centered-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            text-align: center;
+        }
+    </style>
+</head>
   <link rel="stylesheet" type="text/css" href="../static/index.css">
 <body> 
 
@@ -12,24 +22,28 @@
     <div class="row">
       <div class="col-md-12 p-4 text-center">
         <div class="header">
-        <img id="myImage" src="../static/breast_cancer_backround.png" alt="Breast Cancer Prediction Tool" width="900" height="200">  
+        <img id="myImage" src="../static/breast_cancer_backround.png" alt="Breast Cancer Prediction Tool" width="1365" height="200">  
         </div>
         <div class="image-container">
 <!--           <img src="{{url_for('static',filename='img/barttrain.jpeg') }}" alt="BART Train Image"> -->
         </div>
       </div>
-    <div style="font-size: 30px;">
-      <div class="col-md-12 p-2 text-center">
-        <h6>Imput tumor metrics, and click the 'Run Tumor Prediction' button to tell if said tumor is malignant or benign.</h6>
-      </div>
-    </div>
-    <div class="row pb-3 justify-content-md-center">
-      <div class="col-md-3 text-right">
-        <h5>Default Tumor Metrics Below:</h5>
-      </div>
-      </div>
-    </div>
-    
+   <div style="font-size: 50px;" class="centered-text">
+  <div class="col-md-12 p-2 text-center">
+    <h6>Welcome to the Breast Cancer Tumor Prediction Tool!</h6>
+  </div>
+</div>
+<div style="font-size: 30px;">
+  <div class="col-md-12 p-2 text-center">
+    <h6>This application is designed for rapid characterization of cancer tumor severity, via a trained machine learning model that makes a prediction from user tumor metric inputs.</h6>
+  </div>
+</div>
+</div>
+<div style="font-size: 20px;">
+  <div class="col-md-12 p-2 text-center">
+    <h6>Input tumor metrics, and click the 'Run Tumor Prediction' button to tell if said tumor is malignant or benign. Default values are provided.</h6>
+  </div>
+</div>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,43 +54,43 @@
     <form>
 <!-- <form action='/run_prediction' method='post'> -->
         <div class = form-element>
-            <label for="radius">Radius(cm):</label>
+            <label for="radius">Radius(cm) - mean of distances from center to points on the perimeter of tumor:</label>
             <input type="number" id="radius" name="radius" min="-5000" max="5000" step="0.001" value="1.0">
         </div>
         <div class = form-element>
-            <label for="texture">Texture:</label>
+            <label for="texture">Texture(bits) - standard deviation of gray-scale values:</label>
             <input type="number" id="texture" name="texture" min="-5000" max="5000" step="0.001" value="1.0">
         </div>
         <div class = form-element>
-            <label for="perimeter">Perimeter(cm):</label>
+            <label for="perimeter">Perimeter(cm) - length of closed path around the tumor:</label>
             <input type="number" id="perimeter" name="perimeter" min="-5000" max="5000" step="0.010" value="1.0">
         </div>
         <div class = form-element>
-            <label for="area">Area:</label>
+            <label for="area">Area(cm^2) - width x length of tumor:</label>
             <input type="number" id="area" name="area" min="-5000" max="5000" step="0.001" value="1.0">
         </div>
         <div class = form-element>  
-            <label for="smoothness">Smoothness:</label>
+            <label for="smoothness">Smoothness - variation in radius lengths:</label>
             <input type="number" id="smoothness" name="smoothness" min="-5000" max="5000" step="0.001" value="1.0">
         </div>
         <div class = form-element>
-            <label for="compactness">Compactness:</label>
+            <label for="compactness">Compactness - perimeter² / area - 1.0:</label>
             <input type="number" id="compactness" name="compactness" min="-5000" max="5000" step="0.001" value="1.0">
         </div>
         <div class = form-element>
-            <label for="concavity">Concavity:</label>
+            <label for="concavity">Concavity - gr8r than 0 means concave up, less than 0 means concave down:</label>
             <input type="number" id="concavity" name="concavity" min="-5000" max="5000" step="0.001" value="1.0">
         </div>
         <div class = form-element>
-            <label for="concave_points">Concave_Points:</label>
+            <label for="concave_points">Concave_Points - number of concave portions of the contour:</label>
             <input type="number" id="concave_points" name="concave_points" min="-5000" max="5000"step="0.001" value="1.0">
         </div>
         <div class = form-element>
-            <label for="symmetry">Symmetry:</label>
+            <label for="symmetry">Symmetry(mmm) - value of proportionate similarity:</label>
             <input type="number" id="symmetry" name="symmetry" min="-5000" max="5000" step="0.001" value="1.0">
         </div>
         <div class = form-element>
-            <label for="fractal_dimension">Fractal_Dimension:</label>
+            <label for="fractal_dimension">Fractal_Dimension - "coastline approximation" - 1:</label>
             <input type="number" id="fractal_dimension" name="fractal_dimension" min="-5000" max="5000" step="0.001" value="1.0">
         </div>
         <!-- Your existing HTML content here -->
