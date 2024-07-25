@@ -46,29 +46,30 @@ The dataset contains diagnoses of lumps and masses found in patients, classifyin
 
 In this project, various machine learning algorithms were evaluated, including:
 + **Neural Network Model:** Achieved an accuracy of 99%.
+
+  ![Accuracy rating for neural network model](Resources/image(1).png)
 + **Support Vector Machine (SVM) Model:** Achieved an accuracy of 97%.
+
+  ![Accuracy rating for SVM model for all columns](Resources/image(2).png)
+  ![Accuracy rating for SVM model for mean column](Resources/image(3).png)
+  ![Accuracy rating for SVM model for standard error column](Resources/image(4).png)
+  ![Accuracy rating for SVM model for worst (optimized) column](Resources/image(5).png)
   
 For the SVM model, we explored several less optimal versions before finalizing the optimized version that delivered the best performance.
 
 ## Feature
 
-Main feature- Predicts the likelihood of breast cancer based on input data.
+Main feature- Predicts the likelihood of breast cancer based on input data if it could be malignant or benign.
 
 ## Installation
 
-Provide step-by-step instructions to help users get your tool up and running. Include any dependencies or prerequisites. For example:
-bash
-Copy code
 git clone https://github.com/JoeyForgetabbait/Breast-Cancer-Tumor-Characterization-Predict-Tool.git
-cd breast-cancer-prediction
-pip install -r requirements.txt
 
 ## Usage
 
 Provide examples and instructions for using your tool. Include screenshots if possible. For example:
-bash
-Copy code
-python predict.py --input data/sample_data.csv
+
+
 
 ## Example Output
 
