@@ -81,8 +81,7 @@ git clone https://github.com/JoeyForgetabbait/Breast-Cancer-Tumor-Characterizati
 
 ## Usage
 
-Provide examples and instructions for using your tool. Include screenshots if possible. For example:
-
+![Result Output](Resources/input.png)
 
 
 ## Example Output
